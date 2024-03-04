@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd /workspaces/foam-testing || exit
+repo=$(echo "$GITHUB_REPOSITORY" | cut -d'/' -f2)
+
+cd "/workspaces/$repo" || exit
 git pull
 git add .
 
