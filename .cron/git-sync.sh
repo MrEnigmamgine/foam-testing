@@ -8,4 +8,6 @@ git add .
 if ! git diff --cached --exit-code; then
     git commit -m "Automatic commit $(date)"
     git push
+    else
+        echo "No changes"
 fi
